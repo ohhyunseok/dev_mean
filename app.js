@@ -74,7 +74,6 @@ router.route('/products')
 
 });
 
-
 router.route('/products/:product_id')    
     .get(function (req, res) {
     Product.findById(req.params.product_id, function (err, bear) {
@@ -158,6 +157,5 @@ app.use(function (err, req, res, next) {
         error: {}
     });
 });
-
 
 module.exports = app;
